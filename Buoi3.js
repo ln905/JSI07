@@ -151,6 +151,32 @@ function bai5() {
 
 
 
+//Bai8
+function bai8() {
+	let arr=[]
+	let valNumber = parseInt(prompt('So phan tu ban dinh nhap cho mang 1: '))
+	for (let i=0; i<valNumber; i++) {
+		arr.push(parseInt(prompt(`Nhap so thu ${i+1} mang 1`)))
+	}
+
+	function checkSoChan() {
+		let chan=0
+		for (let i=0; i<arr.length; i++){
+			if (arr[i]%2==0){
+				chan=chan+1
+			}
+		}
+		if (chan==arr.length){
+			console.log('1')
+		} else {
+			console.log('0')
+		}
+	}
+checkSoChan()
+}
+
+
+
 //Bai9
 function bai9() {
 	let arr1=[]
