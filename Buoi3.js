@@ -1,6 +1,5 @@
-let arrayNumber = [10, -3, 5, -7, 11, -15, -20, 23];
-
 //BAI1
+let arrayNumber = [10, -3, 5, -7, 11, -15, -20, 23];
 function bai1_1() {
 	let newArr = []
 	for (let i=0; i<=arrayNumber.length; i++){
