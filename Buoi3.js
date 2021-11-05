@@ -65,6 +65,8 @@ function bai1_7(){
 	console.log(newArr)
 }
 
+
+
 //Bai2
 function bai2(){
     let arr = []
@@ -89,6 +91,8 @@ console.log(arrUp)
 console.log(arrDown)
 }
 
+
+
 //Bai3
 function bai3 () {
 	let arr = []
@@ -109,3 +113,41 @@ function bai3 () {
 	}
 	console.log(arr)
 }
+
+
+
+//Bai5
+function bai5() {
+	let arr=[]
+	let valNumber = parseInt(prompt('So phan tu ban dinh nhap (<=50): '))
+	for (let i=0; i<valNumber; i++) {
+		arr.push(parseInt(prompt(`Nhap so thu ${i+1}`)))
+	}
+
+	function chenSo() {
+		let addNum = prompt('Ban co muon chen so khong? (co/khong): ')
+		if (addNum == 'co'){
+			let x = parseInt(prompt('Nhap so x ban muon them vao mang: '))
+			let k = parseInt(prompt('Nhap vi tri k ban muon chen vao day (So phan tu >= x >=0): '))
+			arr.splice(k, 0, x)
+		}
+	}
+	chenSo()
+
+	function chiaHetCho3() {
+		let copyArr =[]
+		let sum=0
+		for (let j=0; j<arr.length; j++){
+			if (arr[j]%3==0){
+				copyArr.push(arr[j])
+			}
+		}
+		for (let k=0; k<copyArr.length; k++){
+			sum=sum+copyArr[k]
+		}
+		console.log(`Trung binh cong cua cac so chia het cho 3 la ${sum/copyArr.length}`)
+	}
+	chiaHetCho3()
+}
+
+
