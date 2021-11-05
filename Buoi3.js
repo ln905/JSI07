@@ -1,4 +1,4 @@
-//BAI1
+//Bai1
 let arrayNumber = [10, -3, 5, -7, 11, -15, -20, 23];
 function bai1_1() {
 	let newArr = []
@@ -150,3 +150,28 @@ function bai5() {
 }
 
 
+
+//Bai9
+function bai9() {
+	let arr1=[]
+	let valNumber1 = parseInt(prompt('So phan tu ban dinh nhap cho mang 1: '))
+	for (let i=0; i<valNumber1; i++) {
+		arr1.push(parseInt(prompt(`Nhap so thu ${i+1} mang 1`)))
+	}
+
+	let arr2=[]
+	let valNumber2 = parseInt(prompt('So phan tu ban dinh nhap cho mang 2: '))
+	for (let i=0; i<valNumber2; i++) {
+		arr2.push(parseInt(prompt(`Nhap so thu ${i+1} mang 2`)))
+	}
+
+	let arr3 = arr1.concat(arr2)
+	
+    function down(){
+	    arr3.sort(function(a, b) {
+		    return b - a;
+	    })
+		console.log(arr3)
+    }	
+	down()
+}
