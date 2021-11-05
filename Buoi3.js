@@ -89,3 +89,23 @@ console.log(arrUp)
 console.log(arrDown)
 }
 
+//Bai3
+function bai3 () {
+	let arr = []
+	let match = 0
+	let n = parseInt(prompt('Nhap so n'))
+	for (let i=3; i<n; i++){
+		for (let k=2; k<i; k++){
+			if (i%k==0){
+				match = match + 1
+			}
+			if (k==i-1 && match==0){
+				arr.push(i)
+			}
+			if (k==i-1 && match!==0){
+				match=0
+			}
+		}
+	}
+	console.log(arr)
+}
