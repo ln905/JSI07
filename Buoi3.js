@@ -151,6 +151,57 @@ function bai5() {
 
 
 
+//Bai6
+function bai6() {
+	let arr1=[]
+	let valNumber1 = parseInt(prompt('So phan tu ban dinh nhap cho mang 1: '))
+	for (let i=0; i<valNumber1; i++) {
+		arr1.push(parseInt(prompt(`Nhap so thu ${i+1} mang 1`)))
+	}
+
+	let arr2=[]
+	let valNumber2 = parseInt(prompt('So phan tu ban dinh nhap cho mang 2: '))
+	for (let i=0; i<valNumber2; i++) {
+		arr2.push(parseInt(prompt(`Nhap so thu ${i+1} mang 2`)))
+	}
+
+	//Tranh lap trong array
+	let arr3=[...new Set(arr1)]
+	let arr4=[...new Set(arr2)]
+
+	//Check
+	function checkMatch() {
+		let notmatch=0
+		let checked=0
+		let lastarr=[]
+		for (let m=0; m<arr3.length; m++){
+			for (let n=0; n<arr4.length; n++){
+				checked=checked+1				
+				if (arr3[m]!==arr4[n]){
+					notmatch=notmatch+1;
+					console.log(`${arr3[m]} khac ${arr4[n]}`)
+				}
+				if (checked==arr4.length){
+					console.log('den buoc nay roi')
+					if (notmatch==arr4.length){
+						lastarr.push(arr3[m])
+						notmatch=0
+						checked=0
+					} else {
+						notmatch=0
+						checked=0
+					}				
+				} 
+			}
+		}
+		result = arr4.concat(lastarr)
+		console.log(`So cac phan tu khong giong nhau o hai mang la ${result.length}`)
+	}
+	checkMatch()
+}
+
+
+
 //Bai8
 function bai8() {
 	let arr=[]
