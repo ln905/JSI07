@@ -1,4 +1,4 @@
-// Bài 1:
+//Bai`1
 class PhanSo {
     constructor(tu,mau){
         this.tu = tu
@@ -21,7 +21,7 @@ class PhanSo {
     }
 }
 
-// Bài 2:
+//Bai`2
 const a = prompt("nhập học sinh: ")
 class Candidate {
     constructor(id,name,dob,math,literature,english){
